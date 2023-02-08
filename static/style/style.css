@@ -4,13 +4,13 @@
 }
 
 #timer {
-font-family: Timer;
-font-weight: 600;
-background-color: rgb(77, 202, 104);
-border-radius: 20px;
-height: 10rem;
+    font-family: Timer;
+    font-weight: 600;
+    background-color: rgb(77, 202, 104);
+    border-radius: 20px;
+    height: 10rem;
     width: 20rem;
-      float: left;
+    float: left;
 
 }
 
@@ -24,11 +24,11 @@ height: 10rem;
 #pomodoro_timer {
     margin-top: 4rem;
     width: 30%;
-    color:rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
     margin: auto;
     height: 20rem;
     text-align: center;
-    position:relative;
+    position: relative;
     z-index: 0;
 }
 
@@ -62,7 +62,7 @@ height: 10rem;
 }
 
 .next_time:hover {
-    color:rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
 }
 
 .white {
@@ -74,10 +74,10 @@ height: 10rem;
 }
 
 .green {
-    color:lightgreen;
+    color: lightgreen;
 }
 
 #session {
-    position:relative;
+    position: relative;
     z-index: 2;
 }
