@@ -41,6 +41,9 @@ class PomodoroTimer {
                 this.current_session++;
                 if (this.current_session > this.sessions) {
                     this.time.innerText = "Time's up";
+                    this.time.style.fontSize = '4rem';
+                    this.time.style.paddingTop = '2rem';
+                    this.time.style.paddingBottom = '1rem';
                     clearInterval(timer_work);
                     return;
                 } else {

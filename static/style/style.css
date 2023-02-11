@@ -1,16 +1,16 @@
 @font-face {
     font-family: Timer;
-    src: url('../font/Caveat-VariableFont_wght.ttf');
+    src: url('../font/OpenSans-VariableFont_wdth,wght.ttf');
 }
 
 #timer {
-font-family: Timer;
-font-weight: 600;
-background-color: rgb(77, 202, 104);
-border-radius: 20px;
-height: 10rem;
-    width: 20rem;
-      float: left;
+    font-family: Timer;
+    font-weight: 600;
+    background-color: rgb(77, 202, 104);
+    border-radius: 20px;
+    height: 12.5rem;
+    width: 25rem;
+    float: left;
 
 }
 
@@ -32,22 +32,10 @@ height: 10rem;
     z-index: 0;
 }
 
-/* #luna {
-  float: left;
-    margin-left:2rem;
-    margin-bottom: -1rem;
-    position: relative;
-    z-index: 2;
-    height: 8rem;
-    width: 15.5rem;
-    background-image: url('../image/luna.png');
-    background-size: cover;
-} */
-
 .button {
     float: left;
     width: 33.33%;
-    font-size: 25px;
+    font-size: 2rem;
     cursor: pointer;
 }
 
@@ -65,19 +53,9 @@ height: 10rem;
     color:rgb(255, 255, 255);
 }
 
-.white {
-    color: white;
-}
-
-.red {
-    color: red;
-}
-
-.green {
-    color:lightgreen;
-}
-
 #session {
     position:relative;
     z-index: 2;
+    font-size:2rem;
 }
+
