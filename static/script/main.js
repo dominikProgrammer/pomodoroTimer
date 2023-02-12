@@ -38,6 +38,9 @@ class PomodoroTimer {
             this.current_time = new Date().getTime();
             let diff = this.moment - this.current_time;
             if (diff <= 0) {
+                //converted from 'https://www.youtube.com/watch?v=6UvimAzSkZY' to mp3 file and put on discord
+                let audio = new Audio('https://cdn.discordapp.com/attachments/1071460452460138619/1074315498893869056/Y2Mate.is_-_FNAF_-_6_AM_sound-6UvimAzSkZY-160k-1659893170028.mp3');
+                audio.play();
                 this.current_session++;
                 if (this.current_session > this.sessions) {
                     this.time.innerText = "Time's up";
