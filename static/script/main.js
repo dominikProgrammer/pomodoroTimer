@@ -5,7 +5,6 @@ class PomodoroTimer {
             return parseInt(minutes) * 60 + parseInt(seconds);
         });
         this.sessions = this.timers.length;
-        console.log(this.sessions);
         this.time = document.getElementById('time');
         this.session = document.getElementById('session');
         this.next_time = document.getElementsByClassName('next_time')[0];
@@ -13,6 +12,7 @@ class PomodoroTimer {
         this.current_time = new Date().getTime();
         let seconds = parseInt(this.timers[0]);
         this.moment = this.current_time + seconds * 1000;
+        this.pause = document.getElementById('break');
     }
 
     setTimer() {
@@ -37,6 +37,9 @@ class PomodoroTimer {
         const timer_work = setInterval(() => {
             this.current_time = new Date().getTime();
             let diff = this.moment - this.current_time;
+            if (this.pause.innerText == '▶️') {
+                this.moment += 100;
+            }
             if (diff <= 0) {
                 //converted from 'https://www.youtube.com/watch?v=6UvimAzSkZY' to mp3 file and put on discord
                 let audio = new Audio('https://cdn.discordapp.com/attachments/1071460452460138619/1074315498893869056/Y2Mate.is_-_FNAF_-_6_AM_sound-6UvimAzSkZY-160k-1659893170028.mp3');
@@ -75,9 +78,22 @@ class PomodoroTimer {
 
 window.addEventListener('load', function () {
 
+    const pause = this.document.getElementById('break');
+
+    pause.addEventListener('click', function () {
+        if(pause.innerText == '⏸️') {
+            pause.innerText = '▶️';
+        } else {
+            pause.innerText = '⏸️';
+        }
+    });
+
+    try {
     const link = this.window.location.href.split('#pomodoro')[1].split(';');
     let timer = new PomodoroTimer(link);
     timer.setTimer();
     timer.run();
-
+    } catch(e){
+        this.document.getElementById('time').innerText = "Error";
+    }
 });
